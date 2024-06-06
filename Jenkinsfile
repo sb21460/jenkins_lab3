@@ -1,11 +1,9 @@
 pipeline{
-    agent {
-        label "worker"
-    }
+    agent any
     stages{
         stage("make directory"){
             steps{
-                sh "mkdir ~/jenkins-pipeline" , true
+                sh "mkdir ~/jenkins-pipeline || true"
             }
         }
         stage("add some files"){
