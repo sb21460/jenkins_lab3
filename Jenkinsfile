@@ -12,5 +12,10 @@ pipeline{
                 sh "ls -al"
             }
         }
+        stage("print success"){
+            steps{
+                echo "Printed Successfully"
+            }
+        }
     }
 }
